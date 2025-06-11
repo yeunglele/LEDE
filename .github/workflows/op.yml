@@ -80,7 +80,9 @@ jobs:
           [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
 
       - name: Generate configuration file
-        run: make defconfig
+        run: | 
+          cd openwrt
+          make defconfig
 
       - name: Download packages
         run: make download -j16
