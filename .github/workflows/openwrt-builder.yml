@@ -52,7 +52,6 @@ jobs:
         swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
 
     - name: Clone source code
-      working-directory: /workdir
       run: |
         git clone ${{ env.REPO_URL }} -b ${{ env.REPO_BRANCH }} openwrt
 
